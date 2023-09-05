@@ -156,7 +156,9 @@ cython_debug/
 *.DS_Store
 
 # Other secret data
+nomatro/config.py
 collected_static/
+*/migrations/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

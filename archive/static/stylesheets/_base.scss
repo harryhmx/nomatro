@@ -1,4 +1,5 @@
-$navbar-color:  #84beb6;
+$navbar-color:  #343d78;
+$navbar-text:   #dbf0d0;
 $navbar-height: 56px;
 
 .normal {
@@ -7,6 +8,14 @@ $navbar-height: 56px;
   header {
     nav.navbar {
       background-color: $navbar-color;
+
+      .navbar-brand {
+        color: $navbar-text;
+      }
+
+      .nav-link {
+        color: $navbar-text;
+      }
     }
   }
 

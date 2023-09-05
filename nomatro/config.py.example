@@ -1,0 +1,21 @@
+# SECURITY WARNING: Set False if turned on in production!
+DEBUG = True
+# Configure ALLOWED_HOSTS for visible domains if turned on in production!
+ALLOWED_HOSTS = []
+# Set SECRET KEY, make this unique.
+SECRET_KEY = ''
+
+# Databases Configuration
+
+# Choose 'postgresql_psycopg2', 'mysql', 'sqlite3' OR 'oracle'.
+DB_ENGINE = 'django.db.backends.postgresql_psycopg2'
+# Set DATABASE NAME, path to database file (BASE_DIR / 'db.sqlite3') if using 'sqlite3'.
+DB_NAME = ''
+# Set USER, not used with 'sqlite3'.
+DB_USER = ''
+# Set PASSWORD, not used with 'sqlite3'.
+DB_PASSWORD = ''
+# Set HOST (eg. localhost, 127.0.0.1), not used with 'sqlite3'.
+DB_HOST = ''
+# Set PORT (eg. 5432 for postgresql), not used with 'sqlite3'.
+DB_PORT = ''
