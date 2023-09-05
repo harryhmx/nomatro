@@ -1,0 +1,19 @@
+$navbar-color:  #84beb6;
+$navbar-height: 56px;
+
+.normal {
+  padding-top: $navbar-height;
+
+  header {
+    nav.navbar {
+      background-color: $navbar-color;
+    }
+  }
+
+  footer {
+    .site-info {
+      padding-top:    20px;
+      padding-bottom: 10px;
+    }
+  }
+}

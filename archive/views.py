@@ -7,5 +7,6 @@ def index(request):
     context = {
       'head_title': 'ReallyBraveHearts',
       'body_title': 'Hello World',
+      'app_name':   'ReallyBraveHearts',
     }
     return HttpResponse(template.render(context, request))

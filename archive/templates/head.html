@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 
 <head>
   <meta charset="utf-8"/>
@@ -7,6 +8,8 @@
   <title>{{ head_title|default:'Nomatro' }}</title>
   <!-- Shortcut Icon -->
   <link rel="shortcut icon" href="{% static '/images/rbh-logo.png' %}"/>
+  <!-- Customize styles -->
+  <link rel="stylesheet" href="{% sass_src 'stylesheets/styles.scss' %}"/>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.1.3/css/bootstrap.min.css"/>
   <!-- Bootstrap JS -->

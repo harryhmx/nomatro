@@ -1,0 +1,12 @@
+@import 'base';
+
+$bg-color-screen: #bee5eb;
+$padding-screen:  80px;
+
+.main-body {
+  .header-screen {
+    background-color: $bg-color-screen;
+    padding-top:      $padding-screen;
+    padding-bottom:   $padding-screen;
+  }
+}

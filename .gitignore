@@ -155,6 +155,9 @@ cython_debug/
 # Residual files
 *.DS_Store
 
+# Other secret data
+collected_static/
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
