@@ -1,6 +1,8 @@
-$navbar-color:  #343d78;
-$navbar-text:   #dbf0d0;
-$navbar-height: 56px;
+$navbar-height:     56px;
+$navbar-color:      #343d78;
+$navbar-text:       #dbf0d0;
+$navbar-font:       1.09375rem;
+$navbar-toggler-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28219, 240, 208, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
 .normal {
   padding-top: $navbar-height;
@@ -9,20 +11,34 @@ $navbar-height: 56px;
     nav.navbar {
       background-color: $navbar-color;
 
-      .navbar-brand {
+      .navbar-brand, .nav-link {
         color: $navbar-text;
       }
 
-      .nav-link {
-        color: $navbar-text;
+      .navbar-brand {
+        padding:   0;
+        font-size: $navbar-font;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus,
+      .nav-link:active {
+        color: #ddd;
+      }
+
+      .navbar-toggler .navbar-toggler-icon {
+        background-image: $navbar-toggler-bg;
       }
     }
   }
 
   footer {
     .site-info {
-      padding-top:    20px;
-      padding-bottom: 10px;
+      padding: 20px 0;
+
+      p {
+        margin: 0;
+      }
     }
   }
 }

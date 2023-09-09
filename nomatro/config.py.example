@@ -19,3 +19,12 @@ DB_PASSWORD = ''
 DB_HOST = ''
 # Set PORT (eg. 5432 for postgresql), not used with 'sqlite3'.
 DB_PORT = ''
+
+# Custom App Configuration
+
+APP_NAMES = {
+	'MAIN':   '',
+	'SECOND': '',
+	'FOOTER': '',
+	'POSTS':  '',
+}

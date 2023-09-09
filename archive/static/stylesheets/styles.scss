@@ -1,12 +1,97 @@
 @import 'base';
 
-$bg-color-screen: #bee5eb;
-$padding-screen:  80px;
+$post-title-color:  #0f3828;
+$post-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$post-body-color:   #2d1f04;
 
-.main-body {
-  .header-screen {
-    background-color: $bg-color-screen;
-    padding-top:      $padding-screen;
-    padding-bottom:   $padding-screen;
+.home-page {
+  background-image:      url('/static/images/home-bg.jpg');
+  background-size:       cover;
+  background-repeat:     no-repeat;
+  background-attachment: fixed;
+  background-position:   center;
+
+  .app-intro {
+    background-color: rgba(232, 208, 216, 0.7);
+    padding:          20px 5%;
+
+    img {
+      border-radius: 30px;
+      box-shadow:    0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color:       $post-title-color;
+      text-shadow: $post-title-shadow;
+    }
+
+    p {
+      color: $post-body-color;
+    }
+  }
+}
+
+.posts-page {
+  background-image:      url('/static/images/posts-bg.jpg');
+  background-size:       cover;
+  background-repeat:     no-repeat;
+  background-attachment: fixed;
+  background-position:   center;
+  padding:               30px 0;
+
+  h1 {
+    color:       #68076f;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .list-posts {
+    .post-item {
+      background-color: rgba(228, 204, 128, 0.7);
+      border:           1px solid #ddd;
+      border-radius:    15px;
+      box-shadow:       0 2px 4px rgba(0, 0, 0, 0.2);
+      margin:           10px 0;
+      padding:          15px;
+
+      h3 {
+        color:       $post-title-color;
+        text-shadow: $post-title-shadow;
+      }
+
+      p {
+        color:  $post-body-color;
+        margin: 0;
+      }
+    }
+
+    .empty-message {
+      text-align: center;
+      color:      #777;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page {
+    padding: 20px 0;
+  }
+
+  .posts-page {
+    .list-posts {
+      padding: 0 2.5%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    padding: 40px 0;
+  }
+
+  .posts-page {
+    .list-posts {
+      padding: 0 12.5%;
+    }
   }
 }
