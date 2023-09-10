@@ -29,6 +29,10 @@ $article-body-color:   #2d1f04;
     .article-body {
       color:  $article-body-color;
 
+      img {
+        max-width: 100%;
+      }
+
       .codehilite {
         border-radius: 10px;
         padding:       10px;

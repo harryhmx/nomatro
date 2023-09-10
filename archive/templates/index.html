@@ -13,21 +13,7 @@
   <div class="home-page">
     <div class="container">
       <div class="app-intro">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="static/images/rbh-team.jpg" alt="RBH Team" class="img-fluid img-thumbnail"/>
-          </div>
-          <div class="col-md-6">
-            <h2>About RBH Programs</h2>
-            <p><strong>Really Brave Hearts (RBH)</strong> is the Education Based Programs, it's co-founded by <strong>Ricky</strong>, <strong>Bill</strong> and <strong>Harry</strong>. The programs focus on organizing a series of quality events or courses to help students and career professionals improve their skills.</p>
-            <p>So far, we have organized several successful events, including outdoor activities and topic discussions, for more details, please click <strong><em>View Posts</em></strong> to see our published articles.</p>
-            <p>If you have any questions, please <strong><em>Contact Us</em></strong>.</p>
-            <div class="text-end">
-              <a href="{% url 'posts' %}" class="btn btn-primary">View Posts</a>
-              <a href="mailto:harry_ctu@hotmail.com" class="btn btn-primary">Contact Us</a>
-            </div>
-          </div>
-        </div>
+        {{ APP_INTRO_HTML|safe }}
       </div>
     </div>
   </div>

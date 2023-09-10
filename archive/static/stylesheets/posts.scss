@@ -27,8 +27,9 @@ $article-body-color:   #2d1f04;
       padding:          15px;
 
       h3 > a {
-        color:       $article-title-color;
-        text-shadow: $article-title-shadow;
+        color:           $article-title-color;
+        text-decoration: initial;
+        text-shadow:     $article-title-shadow;
       }
 
       p {

@@ -1,13 +1,14 @@
 from django.http import HttpResponse
 from django.template import loader
-from nomatro.config import APP_NAMES
+from nomatro.config import APP_NAMES, APP_INTRO_HTML
 from .models import Post
 import markdown
 
 def index(request):
     template = loader.get_template('index.html')
     context = {
-        'APP_NAMES': APP_NAMES,
+        'APP_NAMES':      APP_NAMES,
+        'APP_INTRO_HTML': APP_INTRO_HTML,
     }
     return HttpResponse(template.render(context, request))
 
