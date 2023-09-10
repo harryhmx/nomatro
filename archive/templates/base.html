@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block head_title %}{% endblock %}
+  {% include "head.html" %}
+  {% block custom_styles %}{% endblock %}
+</head>
+
+<body class="normal">
+  {% include "header.html" %}
+  {% block main_body %}{% endblock %}
+  {% include "footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load sass_tags %}
+
+{% block head_title %}
+  <title>{{ APP_NAMES.POSTS|default:'Nomatro Posts' }}</title>
+{% endblock %}
+
+{% block custom_styles %}
+  <link rel="stylesheet" href="{% sass_src 'stylesheets/posts.scss' %}"/>
+{% endblock %}
+
+{% block main_body %}
+  <div class="posts-page">
+    <div class="container">
+      <h1 class="text-center">{{ APP_NAMES.POSTS|default:'Nomatro Posts' }}</h1>
+      <div class="list-posts">
+        {% for post in posts %}
+          <div class="post-item">
+            <h3><a href="{% url 'article' post.slug %}">{{ post.title }}</a></h3>
+            <p><strong>Author:</strong> {{ post.author.username }}</p>
+            <p><strong>Created at:</strong> {{ post.created_at|date:"Y-m-d H:i" }}</p>
+          </div>
+        {% empty %}
+          <div class="post-item empty-message">
+            No articles available.
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

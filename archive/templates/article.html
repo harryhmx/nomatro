@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% load sass_tags %}
+
+{% block head_title %}
+  <title>{{ article.title|default:'Untitled' }} | {% firstof APP_NAMES.SECOND APP_NAMES.MAIN 'Nomatro' %}</title>
+{% endblock %}
+
+{% block custom_styles %}
+  <link rel="stylesheet" href="{% static 'markdown/monokai.css' %}"/>
+  <link rel="stylesheet" href="{% sass_src 'stylesheets/article.scss' %}"/>
+{% endblock %}
+
+{% block main_body %}
+  <div class="article-page">
+    <div class="container">
+      <div class="article-head">
+        <h1 class="article-title">{{ article.title|default:'Untitled' }}</h1>
+        <p class="article-meta">{{ article.created_at|date:'Y-m-d H:i'|default:'1970-01-01 00:00' }} {{ article.author.username }}</p>
+      </div>
+      <div class="article-body">
+        {{ article.body|default:'<p>Nothing here ...</p>'|safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

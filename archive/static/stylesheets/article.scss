@@ -1,0 +1,54 @@
+@import 'base';
+
+$article-title-color:  #0f3828;
+$article-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$article-meta-color:   #4d6f38;
+$article-body-color:   #2d1f04;
+
+.article-page {
+  .container {
+    background-color: #e3eef4;
+    border-radius:    20px;
+    box-shadow:       0 2px 4px rgba(0, 0, 0, 0.2);
+    padding:          20px;
+
+    .article-head {
+      margin-bottom: 10px;
+
+      .article-title {
+        color:       $article-title-color;
+        text-shadow: $article-title-shadow;
+      }
+
+      .article-meta {
+        color:      $article-meta-color;
+        font-style: italic;
+      }
+    }
+
+    .article-body {
+      color:  $article-body-color;
+
+      img {
+        max-width: 100%;
+      }
+
+      .codehilite {
+        border-radius: 10px;
+        padding:       10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .article-page {
+    padding: 10px 2.5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-page {
+    padding: 30px 12.5%;
+  }
+}

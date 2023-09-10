@@ -1,0 +1,63 @@
+@import 'base';
+
+$article-title-color:  #0f3828;
+$article-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$article-body-color:   #2d1f04;
+
+.posts-page {
+  background-image:      url('/static/images/posts-bg.jpg');
+  background-size:       cover;
+  background-repeat:     no-repeat;
+  background-attachment: fixed;
+  background-position:   center;
+  padding:               30px 0;
+
+  h1 {
+    color:       #68076f;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .list-posts {
+    .post-item {
+      background-color: rgba(228, 204, 128, 0.7);
+      border:           1px solid #ddd;
+      border-radius:    15px;
+      box-shadow:       0 2px 4px rgba(0, 0, 0, 0.2);
+      margin:           10px 0;
+      padding:          15px;
+
+      h3 > a {
+        color:           $article-title-color;
+        text-decoration: initial;
+        text-shadow:     $article-title-shadow;
+      }
+
+      p {
+        color:  $article-body-color;
+        margin: 0;
+      }
+    }
+
+    .empty-message {
+      text-align: center;
+      color:      #777;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .posts-page {
+    .list-posts {
+      padding: 0 2.5%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .posts-page {
+    .list-posts {
+      padding: 0 12.5%;
+    }
+  }
+}
