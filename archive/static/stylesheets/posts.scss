@@ -1,35 +1,8 @@
 @import 'base';
 
-$post-title-color:  #0f3828;
-$post-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-$post-body-color:   #2d1f04;
-
-.home-page {
-  background-image:      url('/static/images/home-bg.jpg');
-  background-size:       cover;
-  background-repeat:     no-repeat;
-  background-attachment: fixed;
-  background-position:   center;
-
-  .app-intro {
-    background-color: rgba(232, 208, 216, 0.7);
-    padding:          20px 5%;
-
-    img {
-      border-radius: 30px;
-      box-shadow:    0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      color:       $post-title-color;
-      text-shadow: $post-title-shadow;
-    }
-
-    p {
-      color: $post-body-color;
-    }
-  }
-}
+$article-title-color:  #0f3828;
+$article-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$article-body-color:   #2d1f04;
 
 .posts-page {
   background-image:      url('/static/images/posts-bg.jpg');
@@ -53,13 +26,13 @@ $post-body-color:   #2d1f04;
       margin:           10px 0;
       padding:          15px;
 
-      h3 {
-        color:       $post-title-color;
-        text-shadow: $post-title-shadow;
+      h3 > a {
+        color:       $article-title-color;
+        text-shadow: $article-title-shadow;
       }
 
       p {
-        color:  $post-body-color;
+        color:  $article-body-color;
         margin: 0;
       }
     }
@@ -73,10 +46,6 @@ $post-body-color:   #2d1f04;
 }
 
 @media (max-width: 767px) {
-  .home-page {
-    padding: 20px 0;
-  }
-
   .posts-page {
     .list-posts {
       padding: 0 2.5%;
@@ -85,10 +54,6 @@ $post-body-color:   #2d1f04;
 }
 
 @media (min-width: 768px) {
-  .home-page {
-    padding: 40px 0;
-  }
-
   .posts-page {
     .list-posts {
       padding: 0 12.5%;

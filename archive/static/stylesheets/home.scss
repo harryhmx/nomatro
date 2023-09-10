@@ -1,0 +1,44 @@
+@import 'base';
+
+$article-title-color:  #0f3828;
+$article-title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$article-body-color:   #2d1f04;
+
+.home-page {
+  background-image:      url('/static/images/home-bg.jpg');
+  background-size:       cover;
+  background-repeat:     no-repeat;
+  background-attachment: fixed;
+  background-position:   center;
+
+  .app-intro {
+    background-color: rgba(232, 208, 216, 0.7);
+    padding:          20px 5%;
+
+    img {
+      border-radius: 30px;
+      box-shadow:    0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color:       $article-title-color;
+      text-shadow: $article-title-shadow;
+    }
+
+    p {
+      color: $article-body-color;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    padding: 40px 0;
+  }
+}
