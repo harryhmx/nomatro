@@ -16,7 +16,7 @@
     <div class="container">
       <div class="article-head">
         <h1 class="article-title">{{ article.title|default:'Untitled' }}</h1>
-        <p class="article-meta">{{ article.created_at|date:'Y-m-d H:i'|default:'1970-01-01 00:00' }} {{ article.author.username }}</p>
+        <p class="article-meta">{{ article.created_at|date:'Y-m-d H:i'|default:'1970-01-01 00:00' }} - {{ article.author.first_name }} {{ article.author.last_name }}</p>
       </div>
       <div class="article-body">
         {{ article.body|default:'<p>Nothing here ...</p>'|safe }}

@@ -158,7 +158,7 @@ cython_debug/
 # Other secret data
 nomatro/config.py
 collected_static/
-custom/
+custom/data/
 */migrations/
 
 # PyCharm
