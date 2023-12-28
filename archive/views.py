@@ -25,6 +25,7 @@ def article(request, s):
     article.body = markdown.markdown(article.body, extensions=[
     	           'markdown.extensions.extra',
     	           'markdown.extensions.codehilite',
+                   'md4mathjax',
     	           ])
     template = loader.get_template('article.html')
     context = {
